@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SarvicesController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,6 +23,12 @@ Route::post('/update/password',  [UserController::class, 'password_update'])->na
 
 
 Route::get('/products', [ProductController::class, 'products'])->name('products');
+
+
+Route::get('/sarvices', [SarvicesController::class, 'sarvices'])->name('sarvices');
+
+
+
 Route::get('/reviews', [VideoController::class, 'videos'])->name('videos');
 Route::get('/blogs', [BlogController::class, 'blogs'])->name('blogs');
 

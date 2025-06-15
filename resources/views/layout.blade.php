@@ -100,7 +100,7 @@
                 <ul class="flex space-x-6 text-gray-700">
                     <li><a href="{{ route('home') }}" class="hover:text-orange-500">Home</a></li>
                     <li><a href="{{ route('products') }}" class="hover:text-orange-500">Product</a></li>
-                    <li><a href="#" class="hover:text-orange-500">Service</a></li>
+                    <li><a href="{{ route('sarvices') }}" class="hover:text-orange-500">Service</a></li>
                     <li><a href="{{ route('videos') }}" class="hover:text-orange-500">Reviews</a></li>
                     <li><a href="#" class="hover:text-orange-500">About</a></li>
                     <li><a href="{{ route('blogs') }}" class="hover:text-orange-500">Blog</a></li>
