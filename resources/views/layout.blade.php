@@ -93,6 +93,23 @@
 </head>
 <body class="max-w-7xl mx-auto bg-sky-200 ">
 
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-orange-500">Tech Develop Zone</h1>
+            <nav>
+                <ul class="flex space-x-6 text-gray-700">
+                    <li><a href="" class="hover:text-orange-500">Home</a></li>
+                    <li><a href="{{ route('products') }}" class="hover:text-orange-500">Product</a></li>
+                    <li><a href="#" class="hover:text-orange-500">Service</a></li>
+                    <li><a href="{{ route('videos') }}" class="hover:text-orange-500">Reviews</a></li>
+                    <li><a href="#" class="hover:text-orange-500">About</a></li>
+                    <li><a href="{{ route('blogs') }}" class="hover:text-orange-500">Blog</a></li>
+                    <li><a href="#" class="hover:text-orange-500">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 <section>
         <div class="pb-2">
             <div class="mx-auto max-w-7xl font-quicksand py-4">
@@ -140,6 +157,12 @@
          @yield('content')
 
 
+
+         <footer class="bg-white shadow mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-600">
+            &copy; 2025 Tech Develop Zone. All rights reserved.
+        </div>
+    </footer>
 
     <script src="{{ asset('backend') }}/js/script.js"></script>
     <script src="https://kit.fontawesome.com/8abab984f3.js" crossorigin="anonymous"></script>

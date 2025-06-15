@@ -1,79 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+@extends('layouts.admin')
 
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
-        ul,li{
-            list-style-type:none;
-        }
-        h1,h2,h3,h4,h5,h6,p{
-            line-height: 0.8;
-        }
-        .nav__items.active . {
-            color: var(--skin-color);
-            transform: scale(1.25);
-        }
-        .nav__items.active{
-            border-color: var(--skin-color);
-        }
+@section('content')
 
-    </style>
-</head>
-<body class=" bg-sky-200 ">
-    <!-- <section>
-        <div class="mx-auto max-w-7xl py-4 ">
-            <div class="w-md h-full bg-white">
-
-            </div>
-        </div>
-    </section> -->
-
-
-
-    <!-- <div class="min-h-screen flex flex-col md:flex-row bg-sky-200"> -->
-
-        <!-- Sidebar -->
-        <aside class="fixed bg-white text-gray-800 w-full md:w-40 h-auto md:h-screen p-4 border-b md:border-b-0 md:border-r border-gray-300">
-        <div class="logo capitalize tpo-50 text-2xl transition hover:scale-125">
-                        <a href="#home" class="logo__link font-bold text-xl text-orange-400">Tech Develop Zone</a>
-                    </div>
-
-                    <ul class="nav mt-12 text-center">
-                        <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                            <a href="#" class="  active "><i class="fa fa-home pr-2"></i><span class=" ">home</span></a>
-                        </li>
-                        <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                            <a href="#"class=" "><i class="fa fa-user pr-2"></i><span class=" ">about</span></a>
-                        </li>
-                        <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                            <a href="#"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Add catagory</span></a>
-                        </li>
-                        <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                            <a href="#"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Add Products</span></a>
-                        </li>
-
-                        <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                            <a href="#"class=" "><i class="fa fa-briefcase pr-2"></i><span class=" ">Edit Color</span></a>
-                        </li>
-                        <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                            <a href="#"class=" "><i class="fa fa-blog pr-2"></i><span class=" ">add blog</span></a>
-                        </li>
-
-                    </ul>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="flex-1 ml-40 py-6 px-4 bg-sky-200" >
             <div class="grid grid-cols-3 flex gap-4">
                 <div class="col-span">
                     <div class="max-w-md mx-auto mt-10">
@@ -233,13 +161,7 @@
                 </div>
             </div>
 
-
-
-
             <!-- Table inside main content container -->
-
-
-
 
             <div class="container mx-auto">
                 <h2 class="text-xl font-semibold mb-4">Products Table</h2>
@@ -302,26 +224,4 @@
                 </div>
             </div>
 
-        </main>
-
-    <!-- </div> -->
-
-
-  <!-- -------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="js/script.js"></script>
-    <script src="https://kit.fontawesome.com/8abab984f3.js" crossorigin="anonymous"></script>
-
-</body>
-</html>
+@endsection

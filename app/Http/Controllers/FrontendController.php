@@ -15,8 +15,11 @@ class FrontendController extends Controller
     function  home(){
         return view('home');
     }
-    function  videos(){
-        return view('videos');
+    function blog_show(){
+        return view('frontend.blog.show');
+    }
+    function blogs(){
+        return view('frontend.blog.blogs');
     }
     function  dashboard(){
         return view('dashboard');

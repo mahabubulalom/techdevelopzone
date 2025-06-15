@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
-    //
+    function  videos(){
+        return view('videos');
+    }
 }
