@@ -104,7 +104,7 @@
                     <li><a href="{{ route('videos') }}" class="hover:text-orange-500">Reviews</a></li>
                     <li><a href="#" class="hover:text-orange-500">About</a></li>
                     <li><a href="{{ route('blogs') }}" class="hover:text-orange-500">Blog</a></li>
-                    <li><a href="#" class="hover:text-orange-500">Contact</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-orange-500">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -118,6 +118,7 @@
                         <div class="text-center mx-auto ">
                             <h2 class="text-4xl text-center font-medium text-black ">Welcome to <span class="text-4xl text-center font-medium text-orange-400" >Tech Develop Zone</span></h2>
                             <h2 class="font-medium text-3xl leading-10 font-quicksand text-orange-400 py-2 ">Chouse your amazon products</h2>
+                            <p class="mt-4 text-lg max-w-2xl leading-6 text-gray-300">We provide technology-driven solutions including affiliate products and high-quality digital services.</p>
                         </div>
                     </div>
                     <div class="flex justify-center gap-3 flex-wrap">

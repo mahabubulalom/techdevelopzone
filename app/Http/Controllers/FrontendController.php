@@ -9,9 +9,7 @@ class FrontendController extends Controller
     function welcome(){
         return view('welcome');
     }
-    function layout(){
-        return view('layout');
-    }
+
     function  home(){
         return view('home');
     }
@@ -20,6 +18,9 @@ class FrontendController extends Controller
     }
     function blogs(){
         return view('frontend.blog.blogs');
+    }
+    function contact(){
+        return view('frontend.contact.contact');
     }
     function  dashboard(){
         return view('dashboard');

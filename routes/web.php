@@ -34,10 +34,10 @@ Route::get('/blogs', [BlogController::class, 'blogs'])->name('blogs');
 
 
 Route::get('/',  [FrontendController::class, 'home'])->name('home');
-Route::get('/layout',  [FrontendController::class, 'layout'])->name('layout');
 Route::get('/welcome',  [FrontendController::class, 'welcome']);
 Route::get('/blog/show',  [FrontendController::class, 'blog_show'])->name('blog.show');
 Route::get('/blogs',  [FrontendController::class, 'blogs'])->name('blogs');
+Route::get('/contact',  [FrontendController::class, 'contact'])->name('contact');
 
 
 
