@@ -93,32 +93,75 @@
 </head>
 <body class="max-w-7xl mx-auto bg-sky-200 ">
 
-    <header class="bg-white shadow">
+    <header class="bg-white shadow border-b border-b-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-3xl font-bold text-orange-500">Tech Develop Zone</h1>
             <nav>
-                <ul class="flex space-x-6 text-gray-700">
-                    <li><a href="{{ route('home') }}" class="hover:text-orange-500">Home</a></li>
-                    <li><a href="{{ route('products') }}" class="hover:text-orange-500">Product</a></li>
-                    <li><a href="{{ route('sarvices') }}" class="hover:text-orange-500">Service</a></li>
-                    <li><a href="{{ route('videos') }}" class="hover:text-orange-500">Reviews</a></li>
-                    <li><a href="#" class="hover:text-orange-500">About</a></li>
-                    <li><a href="{{ route('blogs') }}" class="hover:text-orange-500">Blog</a></li>
-                    <li><a href="{{ route('contact') }}" class="hover:text-orange-500">Contact</a></li>
+                <ul class="flex space-x-2 text-gray-700">
+                    <li>
+                        <a href="{{ url('/home') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/reviews') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                Product
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/sarvices') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                Service
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/reviews') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                Reviews
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                About
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/blogs') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                Blog
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/contact') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                            <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
+                                Contact
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-<section>
+    {{-- social info section --}}
+    <section>
         <div class="pb-2">
-            <div class="mx-auto max-w-7xl font-quicksand py-4">
-                <div class="p-8 bg-slate-100 rounded-3xl shadow-boxshadow hover:shadow-boxshadow2 transition-all duration-300">
+            <div class="mx-auto max-w-7xl font-quicksand py-">
+                <div class="p-3 bg-white  shadow-boxshadow hover:shadow-boxshadow2 transition-all duration-300">
                     <div class=" mx-auto text-center">
                         <div class="text-center mx-auto ">
-                            <h2 class="text-4xl text-center font-medium text-black ">Welcome to <span class="text-4xl text-center font-medium text-orange-400" >Tech Develop Zone</span></h2>
+                            {{-- <h2 class="text-4xl text-center font-medium text-black ">Welcome to <span class="text-4xl text-center font-medium text-orange-400" >Tech Develop Zone</span></h2>
                             <h2 class="font-medium text-3xl leading-10 font-quicksand text-orange-400 py-2 ">Chouse your amazon products</h2>
-                            <p class="mt-4 text-lg max-w-2xl leading-6 text-gray-300">We provide technology-driven solutions including affiliate products and high-quality digital services.</p>
+                            <p class="mt-4 text-lg  leading-6 text-gray-300">We provide technology-driven solutions including affiliate products and high-quality digital services.</p> --}}
                         </div>
                     </div>
                     <div class="flex justify-center gap-3 flex-wrap">
@@ -155,13 +198,17 @@
 
 
 
+
+
+
+
          @yield('content')
 
 
 
          <footer class="bg-white shadow mt-16">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            &copy; 2025 Tech Develop Zone. All rights reserved.
+            &copy; 2025 <a href="{{ url('/dashboard') }}" class=" text-blue-300 cursor-pointer hover:underline">Tech Develop Zone.</a>  All rights reserved.
         </div>
     </footer>
 

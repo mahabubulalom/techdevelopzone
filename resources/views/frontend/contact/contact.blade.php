@@ -1,4 +1,4 @@
-@extends('layouts.frontend');
+@extends('layouts.frontend')
 
 @section('content')
 
@@ -61,6 +61,24 @@
       </div>
     </div>
   </div>
+
+    <div class="">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-orange-400">📬 Subscribe for Updates</h2>
+            <p class="text-gray-600 mb-4 leading-6">Stay updated with our latest blog posts. No spam, we promise!</p>
+            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-4">
+                @csrf
+                <input type="email" name="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border border-gray-300 rounded" required>
+                <button type="submit" class="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">Subscribe</button>
+            </form>
+        </div>
+        <div class="rounded-lg shadow-md p-6 mb-6 hover:shadow-xl transition-shadow duration-300">
+
+            ADD
+            <!-- add -->
+
+        </div>
+    </div>
 
 
 @endsection
