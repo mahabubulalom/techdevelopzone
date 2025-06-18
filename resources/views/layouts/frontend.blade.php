@@ -94,19 +94,19 @@
 <body class="max-w-7xl mx-auto bg-sky-200 ">
 
     <header class="bg-white shadow border-b border-b-gray-200">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-3 py-4 flex justify-between items-center">
             <h1 class="text-3xl font-bold text-orange-500">Tech Develop Zone</h1>
             <nav>
-                <ul class="flex space-x-2 text-gray-700">
-                    <li>
-                        <a href="{{ url('/home') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                <ul class="flex space-x-3 text-gray-700">
+                     <li>
+                        <a href="{{ route('home') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
                             <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
                                 Home
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('/reviews') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
+                        <a href="{{ route('products') }}"  class=" group py-2 shadow-lg border-b-orange-400 border-b-2 px-2 cursor-pointer transition-all duration-300 rounded hover:bg-orange-400">
                             <span class="text-16 text-orange-400 font-semibold group-hover:text-white transition-all duration-300">
                                 Product
                             </span>
@@ -208,7 +208,7 @@
 
          <footer class="bg-white shadow mt-16">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            &copy; 2025 <a href="{{ url('/dashboard') }}" class=" text-blue-300 cursor-pointer hover:underline">Tech Develop Zone.</a>  All rights reserved.
+            &copy; 2025 Tech Develop Zone. All rights reserved.
         </div>
     </footer>
 
