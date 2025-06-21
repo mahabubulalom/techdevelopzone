@@ -23,18 +23,20 @@ Route::post('/user/update',  [UserController::class, 'user_update'])->middleware
 Route::post('/update/password',  [UserController::class, 'password_update'])->name('update.password');
 
 
-Route::get('/category',  [CategoryController::class, 'category'])->name('category');
-Route::post('/category/add',  [CategoryController::class, 'category_add'])->name('category.add');
-Route::get('/category/delete/{id}',  [CategoryController::class, 'category_delete'])->name('category.delete');
+Route::get('/category',  [CategoryController::class, 'category'])->middleware(['auth', 'verified'])->name('category');
+Route::post('/category/add',  [CategoryController::class, 'category_add'])->middleware(['auth', 'verified'])->name('category.add');
+Route::get('/category/delete/{id}',  [CategoryController::class, 'category_delete'])->middleware(['auth', 'verified'])->name('category.delete');
 
 
-Route::get('/subcategory',  [SubCategoryController::class, 'subcategory'])->name('subcategory');
-Route::post('/subcategory/add',  [SubCategoryController::class, 'subcategory_add'])->name('subcategory.add');
+Route::get('/subcategory',  [SubCategoryController::class, 'subcategory'])->middleware(['auth', 'verified'])->name('subcategory');
+Route::post('/subcategory/add',  [SubCategoryController::class, 'subcategory_add'])->middleware(['auth', 'verified'])->name('subcategory.add');
+Route::get('/subcategory/delete/{id}',  [SubCategoryController::class, 'subcategory_delete'])->middleware(['auth', 'verified'])->name('subcategory.delete');
 
 
 
 
 Route::get('/products', [ProductController::class, 'products'])->name('products');
+Route::get('/add/products', [ProductController::class, 'add_products'])->middleware(['auth', 'verified'])->name('add.products');
 
 
 Route::get('/sarvices', [SarvicesController::class, 'sarvices'])->name('sarvices');

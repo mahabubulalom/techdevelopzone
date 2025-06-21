@@ -62,7 +62,7 @@
                     <a href="{{ route('subcategory') }}"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Add subcatagory</span></a>
                 </li>
                 <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                    <a href="#"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Add Products</span></a>
+                    <a href="{{ route('add.products') }}"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Add Products</span></a>
                 </li>
 
                 <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -24,14 +25,13 @@ class CategoryController extends Controller
 
         $request->validate([
             'category_name' => 'required|string|max:255',
-            // 'category_description' => 'required|string',
         ]);
 
         Category::create([
             'category_name' => $request->category_name,
             'category_slug' => Str::slug($request->category_name),
-            // 'category_description' => $request->category_description,
-            'created_add' => now(),
+            'created_at' => Carbon::now(),
+            // 'created_add' => now(),
         ]);
 
         return back()->with('success', 'Category created successfully.');
