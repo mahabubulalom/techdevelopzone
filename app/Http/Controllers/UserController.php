@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
 
@@ -35,12 +36,19 @@ class UserController extends Controller
 
 
 
+
+
+
+
+
+
     function password_update(Request $request){
         $request->validate([
             'current_password'=>'required',
             'new_password'=>['required'=> 'confirmed', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
             'password_confirmation'=>'required',
         ]);
+
         if(password_verify($request->current_password, Auth::user()->password)){
             User::find(Auth::id())->update([
                 'password'=>bcrypt($request->password)
@@ -52,6 +60,88 @@ class UserController extends Controller
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // public function password_update(Request $request){
+    //     $request->validate([
+    //         'current_password' => ['required'],
+    //         'new_password' => ['required', 'min:8', 'confirmed'],
+    //     ], [
+    //         'current_password.required' => 'Current password is required.',
+    //         'new_password.required' => 'New password is required.',
+    //         'new_password.min' => 'New password must be at least 8 characters.',
+    //         'new_password.confirmed' => 'Password confirmation does not match.',
+    //     ]);
+
+    //     $user = Auth::user();
+
+    //     // Check if current password is correct
+    //     if (!Hash::check($request->current_password, $user->password)) {
+    //         return back()->with(['curnt' => 'Current password is incorrect.']);
+    //     }
+
+    //     // Update password in users table
+    //     $user->password = Hash::make($request->new_password);
+    //     $user->save();
+
+    //     return back()->with('pass_success', 'Your password has been updated successfully.');
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // public function password_update(Request $request)
+    // {
+    //     // Step 1: Validate input
+    //     $request->validate([
+    //         'current_password' => ['required'],
+    //         'new_password' => ['required', 'string', 'min:8', 'confirmed'],
+    //     ], [
+    //         'current_password.required' => 'Current password is required.',
+    //         'new_password.required' => 'New password is required.',
+    //         'new_password.min' => 'New password must be at least 8 characters.',
+    //         'new_password.confirmed' => 'Password confirmation does not match.',
+    //     ]);
+
+    //     // Step 2: Get current user
+    //     $user = Auth::user();
+
+    //     // Step 3: Check if current password matches
+    //     if (!Hash::check($request->current_password, $user->password)) {
+    //         return back()->withErrors(['current_password' => 'Current password is incorrect.']);
+    //     }
+
+    //     // Step 4: Update password
+    //     $user->password = Hash::make($request->new_password);
+    //     $user = Auth::user();
+
+    //     // Step 5: Success message
+    //     return back()->with('pass_success', 'Password updated successfully.');
+    // }
 
 
 

@@ -8,7 +8,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SarvicesController;
+use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -19,6 +21,16 @@ Route::get('/user/logout',  [HomeController::class, 'logout'])->middleware(['aut
 Route::get('/user/edit',  [UserController::class, 'user_edit'])->middleware(['auth', 'verified'])->name('user.edit');
 Route::post('/user/update',  [UserController::class, 'user_update'])->middleware(['auth', 'verified'])->name('user.update');
 Route::post('/update/password',  [UserController::class, 'password_update'])->name('update.password');
+
+
+Route::get('/category',  [CategoryController::class, 'category'])->name('category');
+Route::post('/category/add',  [CategoryController::class, 'category_add'])->name('category.add');
+Route::get('/category/delete/{id}',  [CategoryController::class, 'category_delete'])->name('category.delete');
+
+
+Route::get('/subcategory',  [SubCategoryController::class, 'subcategory'])->name('subcategory');
+Route::post('/subcategory/add',  [SubCategoryController::class, 'subcategory_add'])->name('subcategory.add');
+
 
 
 
