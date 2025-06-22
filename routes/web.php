@@ -37,6 +37,7 @@ Route::get('/subcategory/delete/{id}',  [SubCategoryController::class, 'subcateg
 
 Route::get('/products', [ProductController::class, 'products'])->name('products');
 Route::get('/add/products', [ProductController::class, 'add_products'])->middleware(['auth', 'verified'])->name('add.products');
+Route::post('/getsubcategory', [ProductController::class, 'getsubcategory'])->middleware(['auth', 'verified']);
 
 
 Route::get('/sarvices', [SarvicesController::class, 'sarvices'])->name('sarvices');

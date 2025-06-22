@@ -14,37 +14,58 @@
                             </div>
 
                             <!-- Category -->
+                            <!-- Category Select -->
                             <div>
-                            <label class="block text-gray-600 font-medium mb-1" for="category">Category</label>
-                            <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
-                                    id="category" type="text" placeholder="Enter category" required>
+                                <label for="category_id" class="block text-gray-600 font-medium mb-1">Select Category</label>
+                                <select
+                                    name=" category_id"
+                                    class="category w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none">
+                                    <option class="text-gray-600" value="">Select Category</option>
+                                    @foreach($categories as $category)
+                                        <option class="text-gray-600" value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('category_id')
+                                    <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <!-- Subcategory -->
+                            <!-- SubCategory Select -->
                             <div>
-                            <label class="block text-gray-600 font-medium mb-1" for="subcategory">Subcategory</label>
-                            <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
-                                    id="subcategory" type="text" placeholder="Enter subcategory">
+                                <label for="subcategory_id" class="block text-gray-600 font-medium mb-1">Select Category</label>
+                                <select
+                                    id="sub"
+                                    name="subcategory_id"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none">
+                                    <option class="text-gray-600" value="">Select SubCategory</option>
+                                    @foreach($subcategories as $subcategory)
+                                        <option class="text-gray-600" value="{{ $subcategory->id }}">{{ $subcategory->subcategory_name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('subcategory_id')
+                                    <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <!-- Image Upload -->
                             <div>
-                            <label class="block text-gray-600 font-medium mb-1" for="image">Product Image</label>
-                            <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
+                                <label class="block text-gray-600 font-medium mb-1" for="image">Product Image</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
                                     id="image" type="file" accept="image/*">
                             </div>
 
                             <!-- Affiliate Link -->
                             <div>
-                            <label class="block text-gray-600 font-medium mb-1" for="affiliate">Affiliate Link</label>
-                            <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
+                                <label class="block text-gray-600 font-medium mb-1" for="affiliate">Affiliate Link</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
                                     id="affiliate" type="url" placeholder="Enter affiliate URL">
                             </div>
 
                             <!-- Date -->
                             <div>
-                            <label class="block text-gray-600 font-medium mb-1" for="date">Date</label>
-                            <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
+                                <label class="block text-gray-600 font-medium mb-1" for="date">Date</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
                                     id="date" type="date" required>
                             </div>
 
@@ -126,5 +147,30 @@
                     </table>
                 </div>
             </div>
+
+@endsection
+
+
+@section('footer_script')
+
+<script>
+    $('.category').change(function(){
+        var category_id = $(this).val();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type:'POST',
+            url:'/getsubcategory',
+            data:{'category_id': category_id},
+            success:function(data){
+                $('#sub').html(data);
+            }
+        });
+    })
+</script>
 
 @endsection
