@@ -80,8 +80,8 @@
 
             <div class=" overflow-x-auto mb-8">
                 @foreach ($categories as $category)
-                <h2 class="text-xl font-semibold p-2 bg-slate-200" >{{ $category->category_name }} Category</h2>
-                    <div class="mb-4">
+                <h2 class="text-xl font-semibold p-3 bg-white rounded-t-lg" >{{ $category->category_name }} Category</h2>
+                    <div class="mb-4 p-3 bg-white">
 
                         <table class="min-w-full bg-white border border-gray-200 text-left text-sm">
                             <thead class="bg-gray-100 border-b border-gray-200">

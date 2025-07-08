@@ -11,6 +11,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SarvicesController;
 use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -20,7 +21,8 @@ Route::get('/user/logout',  [HomeController::class, 'logout'])->middleware(['aut
 
 Route::get('/user/edit',  [UserController::class, 'user_edit'])->middleware(['auth', 'verified'])->name('user.edit');
 Route::post('/user/update',  [UserController::class, 'user_update'])->middleware(['auth', 'verified'])->name('user.update');
-Route::post('/update/password',  [UserController::class, 'password_update'])->name('update.password');
+Route::post('/update/password',  [UserController::class, 'password_update'])->middleware(['auth', 'verified'])->name('update.password');
+Route::post('/user/photo/update',  [UserController::class, 'user_photo_update'])->middleware(['auth', 'verified'])->name('user.photo.update');
 
 
 Route::get('/category',  [CategoryController::class, 'category'])->middleware(['auth', 'verified'])->name('category');
@@ -35,9 +37,17 @@ Route::get('/subcategory/delete/{id}',  [SubCategoryController::class, 'subcateg
 
 
 
+Route::get('/tag',  [TagController::class, 'tag'])->middleware(['auth', 'verified'])->name('tag');
+Route::post('/tag/stor',  [TagController::class, 'tag_stor'])->middleware(['auth', 'verified'])->name('tag.stor');
+Route::get('/tag/delete/{id}',  [TagController::class, 'tag_delete'])->middleware(['auth', 'verified'])->name('tag.delete');
+
+
+
+
 Route::get('/products', [ProductController::class, 'products'])->name('products');
 Route::get('/add/products', [ProductController::class, 'add_products'])->middleware(['auth', 'verified'])->name('add.products');
 Route::post('/getsubcategory', [ProductController::class, 'getsubcategory'])->middleware(['auth', 'verified']);
+Route::post('/products/stor', [ProductController::class, 'products_stor'])->middleware(['auth', 'verified'])->name('products.stor');
 
 
 Route::get('/sarvices', [SarvicesController::class, 'sarvices'])->name('sarvices');

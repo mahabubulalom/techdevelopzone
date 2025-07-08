@@ -8,12 +8,18 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
+use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\ImageManager;
+
+
+
 
 class UserController extends Controller
 {
     function user_edit(){
         return view('backend.user.edit');
     }
+
     // function user_update(){
     //     echo ('edit');
     // }
@@ -35,13 +41,6 @@ class UserController extends Controller
     }
 
 
-
-
-
-
-
-
-
     function password_update(Request $request){
         $request->validate([
             'current_password'=>'required',
@@ -61,9 +60,37 @@ class UserController extends Controller
     }
 
 
+        function user_photo_update(Request $request){
+            $request->validate([
+                'profil_photo'=>'required',
+                'profil_photo'=>'mimes:jpg,png,jpeg',
+                'profil_photo'=>'max:1024',
+            ]);
+
+            if(Auth::user()->image !=null){
+                $delet_from = public_path('uploads/user/'.Auth::user()->image);
+                unlink($delet_from);
+            }
+
+            $photo = $request->profil_photo;
+            $manager = new ImageManager(new Driver());
+            $extension = $photo->extension();
+            $img = $manager->read($photo);
+            $file_name = Auth::id().'.'.$extension;
 
 
+            $img->save(public_path('uploads/user/' . $file_name));
 
+            User::find(Auth::id())->update([
+                'image' =>  $file_name,
+            ]);
+
+
+            // Image::make($photo)->resize(300, 400)->save(public_path('uploads/user/'.$file_name));
+
+            return back()->with('photo_success', 'Profile photo updated successfully!');
+
+        }
 
 
 

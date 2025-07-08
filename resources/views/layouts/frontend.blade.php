@@ -202,11 +202,11 @@
 
 
 
-         @yield('content')
+        @yield('content')
 
 
 
-         <footer class="bg-white shadow mt-16">
+    <footer class="bg-white shadow mt-16">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
             &copy; 2025 <a href="{{ route('admin.panel') }}" class="text-blue-400">Tech Develop Zone.</a>  All rights reserved.
         </div>

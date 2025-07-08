@@ -23,8 +23,6 @@
     </div>
   </section>
 
-
-
   <!-- 🛒 Affiliate Product Section -->
   <section class="py-12 px-6 bg-gray-50">
     <h2 class="text-2xl font-semibold text-center mb-8 text-orange-400">Featured Products</h2>
@@ -130,7 +128,6 @@
       <a href="#" class="view-all bg-orange-400 text-white px-6 py-2 rounded hover:bg-orange-500">View All Services</a>
     </div>
   </section>
-
 
   <!-- 📦 Sample Deliveries Section -->
   <section class="py-12 px-6 bg-gray-50">
@@ -292,6 +289,135 @@
       </div>
     </div>
   </section>
+
+
+  <main class="pt-24">
+
+    <!-- Hero -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold mb-4">We Build Stunning Digital Experiences</h1>
+        <p class="text-gray-600 mb-6 leading-relaxed">Modern design meets powerful technology to elevate your brand.</p>
+        <a href="#services" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700">View Our Work</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="container mx-auto px-6 py-16">
+      <h2 class="text-3xl font-semibold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="p-6 bg-white rounded-lg shadow-lg transform hover:-translate-y-2 transition">
+          <h3 class="font-bold text-xl mb-3">Brand Strategy</h3>
+          <p class="text-gray-600">Define your positioning and voice to stand out in your industry.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg transform hover:-translate-y-2 transition">
+          <h3 class="font-bold text-xl mb-3">UX & Design</h3>
+          <p class="text-gray-600">Craft sleek and intuitive interfaces for web and mobile.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-lg transform hover:-translate-y-2 transition">
+          <h3 class="font-bold text-xl mb-3">Web Development</h3>
+          <p class="text-gray-600">Scalable and performant websites using latest frameworks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center mb-12">Our Recent Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Example project card -->
+          <div class="overflow-hidden rounded-lg shadow-lg group">
+            <img src="1.jpg" alt="Project 1" class="w-full h-56 object-cover group-hover:scale-105 transition"/>
+            <div class="p-6 bg-white">
+              <h3 class="font-bold text-xl mb-2">Project Title</h3>
+              <p class="text-gray-600">Short description of the project.</p>
+            </div>
+          </div>
+          <!-- Add more project cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="container mx-auto px-6 py-16">
+      <h2 class="text-3xl font-semibold text-center mb-12">Meet Our Team</h2>
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-4">
+        <!-- Profile card -->
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <div class="text-center">
+          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
+          <h4 class="font-bold">Name</h4>
+          <p class="text-gray-500">Role</p>
+        </div>
+        <!-- ... -->
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center mb-12">What Our Clients Say</h2>
+        <div class="space-y-8">
+          <div class="p-6 bg-gray-100 rounded-lg shadow">
+            <p class="italic text-gray-700">"YourAgency revamped our brand and delivered more traffic than we imagined!"</p>
+            <p class="mt-4 font-bold">— Client Name, CEO of Company</p>
+          </div>
+          <!-- more testimonials -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6 max-w-lg">
+        <h2 class="text-3xl font-semibold text-center mb-6">Get In Touch</h2>
+        <form class="space-y-4 bg-white p-6 rounded-lg shadow">
+          <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded"/>
+          <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded"/>
+          <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border rounded"></textarea>
+          <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
 
   <!-- ✅ JavaScript -->
   <script>

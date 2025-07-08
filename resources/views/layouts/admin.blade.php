@@ -5,6 +5,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -65,6 +68,9 @@
                 <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
                     <a href="{{ route('add.products') }}"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Add Products</span></a>
                 </li>
+                <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
+                    <a href="{{ route('tag') }}"class=" "><i class="fa fa-list pr-2"></i><span class=" ">Products Tag</span></a>
+                </li>
 
                 <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
                     <a href="#"class=" "><i class="fa fa-briefcase pr-2"></i><span class=" ">Edit Color</span></a>
@@ -93,7 +99,7 @@
       <!-- Profile Picture -->
       <div class="relative">
         <img
-          src="https://i.pravatar.cc/40?img=5"
+          src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}"
           alt="Profile"
           class="w-10 h-10 rounded-full cursor-pointer"
           id="profileButton"
@@ -105,7 +111,7 @@
           class="hidden absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 p-4"
         >
           <div class="text-center border-b pb-4">
-            <img src="https://i.pravatar.cc/80?img=5" alt="Profile" class="w-16 h-16 rounded-full mx-auto mb-2"/>
+            <img src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}" alt="Profile" class="w-16 h-16 rounded-full mx-auto mb-2"/>
             <h4 class="font-semibold text-lg">{{ Auth::user()->name }}</h4>
             <p class="text-sm text-gray-500">{{ Auth::user()->email }}</p>
           </div>
@@ -156,6 +162,8 @@
     <script src="https://kit.fontawesome.com/8abab984f3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     @yield('footer_script')
 

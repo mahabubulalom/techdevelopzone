@@ -63,7 +63,7 @@
                         <div>
                             <label for="name" class="block text-gray-600 font-medium mb-1">Current Password</label>
                             <input type="password"   name="current_password"  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"/>
-                            @error(' ')
+                            @error('current_password')
                                 <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                             @enderror
                             @if (@session('curnt'))
@@ -87,6 +87,48 @@
                             @error('password_confirmation')
                                 <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                             @enderror
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button
+                            type="submit"
+                            class="w-full bg-orange-400 text-white py-2 rounded-md font-semibold hover:bg-orange-500 transition"
+                            >
+                            Update
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-span-">
+                    <div class="max-w-md mx-auto mt-10 bg-white shadow-lg rounded-xl p-6">
+                        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Chang photo</h2>
+                        @if(session('photo_success'))
+                            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
+                                {{ session('photo_success') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('user.photo.update') }}" method="POST"  class="space-y-4" enctype="multipart/form-data">
+                            @csrf
+                        <!-- current password -->
+                        <div>
+                            <label for="photo" class="block text-gray-600 font-medium mb-1">select Photo</label>
+                            <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400 focus:outline-none"
+                                name="profil_photo" id="" type="file" onchange="document.getElementById('blah').src =window.URL.createObjectURL(this.files[0])">
+
+                            <div class="w-32 mt-4">
+                                <img src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}" id="blah" alt="">
+                            </div>
+
+                            @error('profil_photo')
+                                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            @enderror
+                            @if (@session('curnt'))
+                                <p class="text-red-600 text-sm mt-1">{{ session('curnt') }}</p>
+                            @endif('curnt')
                         </div>
 
                         <!-- Submit Button -->
