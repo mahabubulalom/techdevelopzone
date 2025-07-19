@@ -1,117 +1,11 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <section>
-
-        <div class="pb-2">
-            <div class="mx-auto max-w-7xl font-quicksand py-4">
-                <div class="p-8 bg-slate-100 rounded-3xl shadow-boxshadow hover:shadow-boxshadow2 transition-all duration-300">
-
-                    <h2 class="text-3xl text-center font-bold mb-8">🔥 Trending Products</h2>
-
-                    <div class="carousel-wrapper">
-                        <div id="carousel" class="carousel">
-
-                            <!-- Cloned last 2 for infinite effect -->
-                            <!-- Slide Item -->
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Eufy E28 Omni Robot Vacuum And Mop Combo.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-
-                            <!-- Real products -->
-                            <!-- Slide Item -->
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Eufy E28 Omni Robot Vacuum And Mop Combo.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-
-
-                            <!-- Cloned first 2 for infinite effect -->
-                            <!-- Slide Item -->
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-                            <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
-                                <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
-                                <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
-                                <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="flex justify-center gap-4 mt-6">
-                        <button id="prevBtn" class="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500">← Prev</button>
-                        <button id="nextBtn" class="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500">Next →</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
-    <!-- 📦 Sample Deliveries Section -->
+
+    <!-- 📦 product -->
     <section>
         <div class="pb-28">
             <div class="mx-auto max-w-7xl font-quicksand py-4">
@@ -928,7 +822,7 @@
 
 
 
-<!-- 📦 Sample Deliveries Section -->
+    <!-- 📦 Sample Deliveries Section -->
     <section class="py-12 px-6 bg-gray-50">
         <h2 class="text-2xl font-semibold text-center mb-8">Sample Deliveries</h2>
 
@@ -1427,6 +1321,115 @@
             </div>
         </div>
     </section>
+
+
+    {{-- tranding product --}}
+        <section>
+            <div class="pb-2">
+                <div class="mx-auto max-w-7xl font-quicksand py-4">
+                    <div class="p-8 bg-slate-100 rounded-3xl shadow-boxshadow hover:shadow-boxshadow2 transition-all duration-300">
+
+                        <h2 class="text-3xl text-center font-bold mb-8">🔥 Trending Products</h2>
+
+                        <div class="carousel-wrapper">
+                            <div id="carousel" class="carousel">
+
+                                <!-- Cloned last 2 for infinite effect -->
+                                <!-- Slide Item -->
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Eufy E28 Omni Robot Vacuum And Mop Combo.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+
+                                <!-- Real products -->
+                                <!-- Slide Item -->
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Eufy E28 Omni Robot Vacuum And Mop Combo.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+
+
+                                <!-- Cloned first 2 for infinite effect -->
+                                <!-- Slide Item -->
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+                                <div class="product bg-white p-5 rounded-lg shadow hover:shadow-lg transition">
+                                    <img class="w-full  object-cover transition-all duration-300 bg-cover align-middle" src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="no images">
+                                    <h3 class="text-xl font-semibold mb-2 text-orange-400 text-center">🎬 Video Editing</h3>
+                                    <p class="leading-6 text-gray-600 text-center">YouTube videos, reels, intros & motion graphics editing.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center gap-4 mt-6">
+                            <button id="prevBtn" class="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500">← Prev</button>
+                            <button id="nextBtn" class="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500">Next →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- ✅ JavaScript -->
     <script>

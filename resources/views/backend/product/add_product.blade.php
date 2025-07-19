@@ -129,7 +129,7 @@
 
     <!-- Table inside main content container -->
 
-    <div class="container mx-auto">
+    <div class="container mx-auto mb-8">
         <h2 class="text-xl font-semibold mb-4">Products Table</h2>
 
         <div class="overflow-x-auto">
@@ -148,41 +148,24 @@
             <tbody class="divide-y divide-gray-100">
 
                 <!-- Row 1 -->
+                @foreach ($products as $sl=>$product)
                 <tr>
-                <td class="px-4 py-2">
-                    <img src="https://via.placeholder.com/40" alt="Thumbnail" class="w-10 h-10 rounded object-cover" />
-                </td>
-                <td class="px-4 py-2">Sample Title</td>
-                <td class="px-4 py-2">Sample Category</td>
-                <td class="px-4 py-2">Sample Subcategory</td>
-                <td class="px-4 py-2 text-blue-600 hover:underline">
-                    <a href="#">example.com</a>
-                </td>
-                <td class="px-4 py-2">2025-06-13</td>
-                <td class="px-4 py-2">
-                    <button class="text-blue-600 hover:underline mr-2">Edit</button>
-                    <button class="text-red-600 hover:underline">Delete</button>
-                </td>
+                    <td class="px-4 py-2">
+                        <img src="{{ asset('uploads/product') }}/{{ $product->image }}" alt="Thumbnail" class="w-10 h-10 rounded object-cover" />
+                    </td>
+                    <td class="px-4 py-2">{{ $product->title }}</td>
+                    <td class="px-4 py-2">{{ $product->category_id }}</td>
+                    <td class="px-4 py-2">{{ $product->subcategory_id }}</td>
+                    <td class="px-4 py-2 text-blue-600 hover:underline">
+                        <a href="#">{{ $product->affiliate_link }}</a>
+                    </td>
+                    <td class="px-4 py-2">{{ $product->updated_at==NULL?$product->created_at->diffForHumans():$product->updated_at->diffForHumans() }}</td>
+                    <td class="px-4 py-2">
+                        <button class="text-blue-600 hover:underline mr-2">Edit</button>
+                        <button class="text-red-600 hover:underline">Delete</button>
+                    </td>
                 </tr>
-
-                <!-- Row 2 -->
-                <tr>
-                <td class="px-4 py-2">
-                    <img src="https://via.placeholder.com/40" alt="Thumbnail" class="w-10 h-10 rounded object-cover" />
-                </td>
-                <td class="px-4 py-2">Another Title</td>
-                <td class="px-4 py-2">Another Category</td>
-                <td class="px-4 py-2">Another Subcategory</td>
-                <td class="px-4 py-2 text-blue-600 hover:underline">
-                    <a href="#">example.org</a>
-                </td>
-                <td class="px-4 py-2">2025-06-12</td>
-                <td class="px-4 py-2">
-                    <button class="text-blue-600 hover:underline mr-2">Edit</button>
-                    <button class="text-red-600 hover:underline">Delete</button>
-                </td>
-                </tr>
-
+                @endforeach
                 <!-- Add more rows as needed -->
 
             </tbody>

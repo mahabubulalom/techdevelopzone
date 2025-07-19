@@ -22,10 +22,12 @@ class ProductController extends Controller
         $categories = Category::all();
         $subcategories = Subcategory::all();
         $tags = tag::all();
+        $products = products::all();
         return view('backend.product.add_product' ,[
             'categories'=> $categories,
             'subcategories'=> $subcategories,
             'tags'=> $tags,
+            'products'=> $products,
         ]);
     }
 

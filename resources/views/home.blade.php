@@ -3,440 +3,497 @@
 @section('content')
 
 
+  <!-- Hero Section -->
+  <section class="bg-gray-700 text-white py-20 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-  <!-- ✅ Banner Section with <img> -->
-      <!-- ✅ Banner Section with <img> -->
-  <section class="relative w-full h-[400px] md:h-[500px] overflow-hidden mb-16">
-    <img
-      src="{{ asset('backend') }}/image/tech-develop-zone.jpg"
-      alt="Company Banner"
-      class="w-full h-full object-fill"
-    />
-    <!-- Overlay Text -->
-    <div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-end content-end items-end text-white text-center p-4">
-      <div class=" mx-auto text-center">
-        <div class="text-center mx-auto ">
-          <p class="mt-4 text-lg max-w-2xl leading-6 text-gray-300">We provide technology-driven solutions including affiliate products and high-quality digital services.</p>
-        </div>
+      <!-- Left Text Content -->
+      <div>
+        <h3 class="text-yellow-400 text-xl font-semibold mb-2">WELCOME!</h3>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">The Best Services</h1>
+        <p class="text-sm md:text-base text-gray-200 mb-6">
+          We use quality products and the latest styling techniques to bring out your very best.
+          We promise to provide you with 5-star service.
+        </p>
+        <a href="{{ url('/products') }}" class="bg-yellow-500 text-gray-900 font-semibold px-5 py-2 rounded hover:bg-yellow-400">
+          Make Ordar
+        </a>
       </div>
 
+      <!-- Right Image Placeholder -->
+      <div class="h-52 bg-gray-300 rounded-md overflow-hidden">
+          <img src="{{ asset('backend') }}/image/tech-develop-zone.jpg" alt="no image" class="w-full h-full ">
+      </div>
     </div>
   </section>
 
-  <!-- 🛒 Affiliate Product Section -->
-  <section class="py-12 px-6 bg-gray-50">
-    <h2 class="text-2xl font-semibold text-center mb-8 text-orange-400">Featured Products</h2>
-    <div class="grid md:grid-cols-4 grid-cols-3 gap-3 max-w-6xl mx-auto">
-
-      <!-- Product Card -->
-      <div class="bg-white rounded-lg shadow-md  text-center">
-        <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="mx-auto mb-4 rounded ">
-        <div class="p-2">
-
-          <h3 class="text-lg font-bold mb-2 text-orange-400">Product Title</h3>
-          <p class="text-sm mb-4">Short description of the product goes here.</p>
-          <a href="#" target="_blank" class="inline-block bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 transition">Buy Now</a>
+  <!-- Service Section -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image Layout Left -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <div class="h-24 bg-gray-300 rounded"></div>
+          <div class="h-24 bg-gray-300 rounded"></div>
         </div>
+        <div class="h-52 bg-gray-400 rounded"></div>
       </div>
 
-
-      <!-- Product Card -->
-      <div class="bg-white rounded-lg shadow-md  text-center">
-        <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="mx-auto mb-4 rounded ">
-        <div class="p-3">
-
-          <h3 class="text-lg font-bold mb-2 text-orange-400">Product Title</h3>
-          <p class="text-sm mb-4">Short description of the product goes here.</p>
-          <a href="#" target="_blank" class="inline-block bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 transition">Buy Now</a>
-        </div>
-      </div>
-
-      <!-- Product Card -->
-      <div class="bg-white rounded-lg shadow-md  text-center">
-        <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="mx-auto mb-4 rounded ">
-        <div class="p-3">
-
-          <h3 class="text-lg font-bold mb-2 text-orange-400">Product Title</h3>
-          <p class="text-sm mb-4">Short description of the product goes here.</p>
-          <a href="#" target="_blank" class="inline-block bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 transition">Buy Now</a>
-        </div>
-      </div>
-
-      <!-- Product Card -->
-      <div class="bg-white rounded-lg shadow-md  text-center">
-        <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="mx-auto mb-4 rounded ">
-        <div class="p-3">
-
-          <h3 class="text-lg font-bold mb-2 text-orange-400">Product Title</h3>
-          <p class="text-sm mb-4">Short description of the product goes here.</p>
-          <a href="#" target="_blank" class="inline-block bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 transition">Buy Now</a>
-        </div>
-      </div>
-
-
-      <!-- Repeat for other products -->
-    </div>
-  </section>
-
-  <!-- 💼 Digital Services Section -->
-  <section class="py-12 px-6">
-    <h2 class="text-2xl font-semibold text-center mb-8 text-orange-400">Our Digital Services</h2>
-    <div class="grid md:grid-cols-5 gap-3 max-w-6xl mx-auto">
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Graphic Design</h3>
-            <p class="leading-6">Creative and professional design solutions for brands.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Web Development</h3>
-            <p class="leading-6">Responsive, SEO-friendly, and modern web design services.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Social Media Design</h3>
-            <p class="leading-6">Custom graphics tailored for platforms like Facebook, Instagram, and more.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Social Media Design</h3>
-            <p class="leading-6">Custom graphics tailored for platforms like Facebook, Instagram, and more.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Social Media Design</h3>
-            <p class="leading-6">Custom graphics tailored for platforms like Facebook, Instagram, and more.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Social Media Design</h3>
-            <p class="leading-6">Custom graphics tailored for platforms like Facebook, Instagram, and more.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Social Media Design</h3>
-            <p class="leading-6">Custom graphics tailored for platforms like Facebook, Instagram, and more.</p>
-        </div>
-
-        <div class="bg-white border p-6 rounded text-center leading-6">
-            <h3 class="text-xl font-bold mb-2 text-orange-400">Social Media Design</h3>
-            <p class="leading-6">Custom graphics tailored for platforms like Facebook, Instagram, and more.</p>
-        </div>
-
-    </div>
-    <div class="text-center mt-8">
-      <a href="#" class="view-all bg-orange-400 text-white px-6 py-2 rounded hover:bg-orange-500">View All Services</a>
-    </div>
-  </section>
-
-  <!-- 📦 Sample Deliveries Section -->
-  <section class="py-12 px-6 bg-gray-50">
-    <h2 class="text-2xl font-semibold text-center mb-8 text-orange-400">Sample Deliveries</h2>
-
-    <!-- Slider Container -->
-    <div class="relative max-w-6xl mx-auto">
-
-      <!-- Slider -->
-      <div id="slider" class="flex overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory">
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide Item -->
-        <div class="max-w-sm w-60 bg-white flex-shrink-0 rounded-lg shadow-md snap-center overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-            <!-- Product Image -->
-            <img src="{{ asset('backend') }}/image/Ring Video Doorbell pro 2.jpg" alt="Product Name" class="w-full h-60 object-cover">
-
-            <!-- Product Info -->
-            <div class="p-4 bg-gray-200">
-                <h2 class="text-xl font-semibold mb-2">Product Title</h2>
-                <p class="text-gray-600 text-sm">
-                This is a short description of the product. It explains key features or benefits to help customers understand what it offers.
-                </p>
-            </div>
-        </div>
-
-
-      </div>
-
-      <!-- Controls -->
-      <div class="flex justify-center mt-6 gap-4">
-        <button onclick="scrollSlider(-1)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">← Prev</button>
-        <button onclick="scrollSlider(1)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Next →</button>
+      <!-- Right Content -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">We're Here To Service Your Degital product </h2>
+        <p class="text-sm text-gray-600 mb-6">
+          We provide modern digital solutions to help your business grow. From web development and branding to digital marketing and strategy — we deliver results that matter.
+        </p>
+        <a href="{{ url('/about') }}" class="bg-yellow-500 text-gray-900 font-semibold px-5 py-2 rounded hover:bg-yellow-400">
+          Learn More
+        </a>
       </div>
     </div>
   </section>
 
 
-  <main class="pt-24">
+  <!-- Our Services Section -->
+  <section class="py-12 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-4">Our Services</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-10 leading-5">
+      Whether you are looking for a quick beach side getaway or a pampering day for yourself, we have the treatments to meet your needs. All of our services are specially designed for restoration, recovery and relaxation.
+    </p>
 
-    <!-- Hero -->
-    <section class="bg-white py-20">
-      <div class="container mx-auto px-6 text-center">
-        <h1 class="text-5xl font-bold mb-4">We Build Stunning Digital Experiences</h1>
-        <p class="text-gray-600 mb-6 leading-relaxed">Modern design meets powerful technology to elevate your brand.</p>
-        <a href="#services" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700">View Our Work</a>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+      <!-- Graphic Design -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">🎨 Graphic Design</h3>
+          <p class="leading-6 text-sm text-gray-600 ">Custom logos, branding, social media graphics, and more to make your business visually stunning.</p>
+        </div>
+
+      <!-- Digital Marketing -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">📢 Digital Marketing</h3>
+          <p class="leading-6 text-sm text-gray-600 ">Strategic campaigns across social media, email, and PPC to grow your online presence.</p>
+        </div>
+
+      <!--  Web Design -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">💻 Web Design</h3>
+          <p class="leading-6 text-sm text-gray-600 ">Creative and responsive website designs that capture attention and convert visitors.</p>
+        </div>
+
+      <!-- Web Development -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">🛠 Web Development</h3>
+          <p class="leading-6 text-sm text-gray-600 ">Custom-built websites and applications with performance and scalability in mind.</p>
+        </div>
+
+      <!-- UI/UX Design -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">📱 UI/UX Design</h3>
+          <p class="leading-6 text-sm text-gray-600 ">User-centered design that delivers seamless and intuitive digital experiences.</p>
+        </div>
+
+      <!-- Clipping Path -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">✂️ Clipping Path</h3>
+          <p class="leading-6 text-sm text-gray-600 ">High-quality image editing, background removal, and product photo enhancement for e-commerce.</p>
+        </div>
+
+      <!-- Social Media Marketing -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">📈 Social Media Marketing</h3>
+          <p class="leading-6 text-sm text-gray-600 ">Facebook ads, Instagram marketing, email campaigns, Google Ads.</p>
+        </div>
+
+      <!-- Amazon Marketing -->
+        <div class=" rounded-lg p-1 shadow hover:shadow-xl transition">
+          <h3 class="text-lg font-semibold mb-2 text-gray-800 ">🛒 Amazon Marketing</h3>
+          <p class="leading-6 text-sm text-gray-600 ">Product listing optimization, A+ content, Amazon PPC & store management for higher conversions.</p>
+        </div>
+
+
+      <!-- Video Editing -->
+      {{-- <div>
+        <h3 class="font-semibold text-lg mb-1">🎬 Video Editing</h3>
+        <p class="text-sm text-gray-600 mb-1">YouTube videos, reels, intros & motion graphics editing.</p>
+        <span class="text-yellow-600 font-bold">$20</span>
+      </div> --}}
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <!-- Text Content -->
+        <div>
+            <h2 class="text-2xl font-semibold mb-6">Why Choose Us</h2>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>What services do you offer?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    We offer a wide range of digital services including web design and development, digital marketing, SEO, social media management, branding, and graphic design.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>How much do your services cost?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    Our pricing depends on the scope and complexity of the project. We offer custom quotes after understanding your business goals and requirements. Contact us for a free consultation.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>How long does it take to complete a project?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    It depends on the size and type of project. A basic website may take 1–2 weeks, while a full branding and marketing package can take 3–6 weeks. We always provide a clear timeline before starting.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>Do you provide support after project completion?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    Yes, we offer ongoing maintenance and support packages to keep your website or campaigns running smoothly after launch.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>Can you redesign my existing website?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    Absolutely! We specialize in modernizing outdated websites with improved design, performance, and SEO.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>Will my website be mobile-friendly?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    Yes. All our websites are fully responsive and optimized for mobile, tablet, and desktop devices.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>Do you work with small businesses/startups?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    Yes! Whether you're just starting out or scaling up, we tailor solutions to fit your goals and budget.
+                </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b pb-4">
+                <button class="faq-toggle w-full flex justify-between items-center text-left text-lg font-medium text-gray-800 focus:outline-none">
+                <span><i class="fas fa-circle-question text-indigo-500 mr-2"></i>How do I get started?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300 text-gray-600"></i>
+                </button>
+                <div class="accordion-content mt-2 text-gray-600">
+                <p class="pt-2 leading-6">
+                    Simply contact us through our form or email, and we’ll set up a free consultation to discuss your needs.
+                </p>
+                </div>
+            </div>
+        </div>
+
+      <!-- Placeholder Image Area -->
+      <div class="relative">
+        {{-- <div class="w-40 h-40 bg-gray-300 absolute top-0 left-10 z-10"></div> --}}
+        <div class="w- h-80 bg-gray-400 relative z-0"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Work Showcase Section -->
+  <section class="bg-gray-900 py-12 px-6 text-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-wrap justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold">Work Showcase</h2>
+        <div class="flex space-x-6 text-sm font-medium">
+          <a href="#" class="text-yellow-500">Graphics</a>
+          <a href="#">Web Design</a>
+          <a href="#">Web Development</a>
+          <a href="#">Degital marketing</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="h-56 bg-gray-300"></div>
+        <div class="h-56 bg-gray-400"></div>
+        <div class="h-56 bg-gray-300"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Product Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Our Product</h2>
+            <div class="flex space-x-2">
+                <button id="prevBtn" class="bg-yellow-500 text-white px-3 py-1 rounded">←</button>
+                <button id="nextBtn" class="bg-yellow-500 text-white px-3 py-1 rounded">→</button>
+            </div>
+            </div>
+
+            <!-- Scrollable Container -->
+            <div id="productSlider" class="flex overflow-x-auto space-x-6 scroll-smooth">
+            <!-- Product 1 -->
+            <div class="min-w-[250px] bg-gray-100 p-4 shrink-0">
+                <div class="h-40 bg-gray-300 mb-4"></div>
+                <h3 class="text-sm font-semibold">Hair Lotion</h3>
+                <p class="text-yellow-600 font-bold text-sm">$72.00</p>
+                <p class="text-xs text-gray-500">4.3 reviews</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="min-w-[250px] bg-gray-100 p-4 shrink-0">
+                <div class="h-40 bg-gray-300 mb-4"></div>
+                <h3 class="text-sm font-semibold">Hair Shampoo</h3>
+                <p class="text-yellow-600 font-bold text-sm">$48.00</p>
+                <p class="text-xs text-gray-500">4.9 reviews</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="min-w-[250px] bg-yellow-100 p-4 border-2 border-yellow-500 shrink-0">
+                <div class="h-40 bg-gray-300 mb-4"></div>
+                <h3 class="text-sm font-semibold">Hair Serum</h3>
+                <p class="text-yellow-600 font-bold text-sm">$210.00</p>
+                <p class="text-xs text-gray-500">4.8 reviews</p>
+                <button class="mt-2 text-xs bg-yellow-600 text-white px-3 py-1 rounded">Add to cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="min-w-[250px] bg-gray-100 p-4 shrink-0">
+                <div class="h-40 bg-gray-300 mb-4"></div>
+                <h3 class="text-sm font-semibold">Hair Treatment</h3>
+                <p class="text-yellow-600 font-bold text-sm">$59.00</p>
+                <p class="text-xs text-gray-500">4.0 reviews</p>
+            </div>
+
+            </div>
+        </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="container mx-auto px-6 py-16">
-      <h2 class="text-3xl font-semibold text-center mb-12">Our Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="p-6 bg-white rounded-lg shadow-lg transform hover:-translate-y-2 transition">
-          <h3 class="font-bold text-xl mb-3">Brand Strategy</h3>
-          <p class="text-gray-600">Define your positioning and voice to stand out in your industry.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg transform hover:-translate-y-2 transition">
-          <h3 class="font-bold text-xl mb-3">UX & Design</h3>
-          <p class="text-gray-600">Craft sleek and intuitive interfaces for web and mobile.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg transform hover:-translate-y-2 transition">
-          <h3 class="font-bold text-xl mb-3">Web Development</h3>
-          <p class="text-gray-600">Scalable and performant websites using latest frameworks.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="bg-gray-100 py-16">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center mb-12">Our Recent Work</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Example project card -->
-          <div class="overflow-hidden rounded-lg shadow-lg group">
-            <img src="1.jpg" alt="Project 1" class="w-full h-56 object-cover group-hover:scale-105 transition"/>
-            <div class="p-6 bg-white">
-              <h3 class="font-bold text-xl mb-2">Project Title</h3>
-              <p class="text-gray-600">Short description of the project.</p>
-            </div>
+  <!-- Meet Our Team Section -->
+  <section class="bg-gray-50 py-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image and Highlight -->
+      <div class="relative">
+        <div class="w-48 h-48 bg-gray-300 absolute -top-4 -left-4 border-2 border-yellow-400 z-0"></div>
+        <div class="w-64 h-64 bg-gray-400 relative z-10 flex items-end justify-center text-white font-bold text-lg p-4">
+          <div>
+            Jenny Wilson<br>
+            <span class="text-sm font-normal text-yellow-300">CEO of DigitalVision</span>
           </div>
-          <!-- Add more project cards -->
         </div>
       </div>
-    </section>
 
-    <!-- Team -->
-    <section id="team" class="container mx-auto px-6 py-16">
-      <h2 class="text-3xl font-semibold text-center mb-12">Meet Our Team</h2>
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-4">
-        <!-- Profile card -->
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <div class="text-center">
-          <img src="2.jpg" alt="Team Member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover"/>
-          <h4 class="font-bold">Name</h4>
-          <p class="text-gray-500">Role</p>
-        </div>
-        <!-- ... -->
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="bg-white py-16">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center mb-12">What Our Clients Say</h2>
-        <div class="space-y-8">
-          <div class="p-6 bg-gray-100 rounded-lg shadow">
-            <p class="italic text-gray-700">"YourAgency revamped our brand and delivered more traffic than we imagined!"</p>
-            <p class="mt-4 font-bold">— Client Name, CEO of Company</p>
-          </div>
-          <!-- more testimonials -->
+      <!-- Text -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Meet Our Team</h2>
+        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+          House of Hair Salon & Spa is one of Brooklyn’s most trusted salons. Whether you’re looking for a completely new style or want to enhance your existing look, our talented team are here to make it happen.
+        </p>
+        <div class="flex space-x-4">
+          <div class="w-16 h-16 bg-gray-300"></div>
+          <div class="w-16 h-16 bg-gray-300"></div>
+          <div class="w-16 h-16 bg-gray-300"></div>
         </div>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="bg-gray-100 py-16">
-      <div class="container mx-auto px-6 max-w-lg">
-        <h2 class="text-3xl font-semibold text-center mb-6">Get In Touch</h2>
-        <form class="space-y-4 bg-white p-6 rounded-lg shadow">
-          <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded"/>
-          <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded"/>
-          <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border rounded"></textarea>
-          <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Message</button>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-
-
-  <!-- ✅ JavaScript -->
-  <script>
-    function scrollSlider(direction) {
-      const slider = document.getElementById('slider');
-      const scrollAmount = 320; // Adjust based on image size + gap
-      slider.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-
-
-  <!-- 🤝 Support Info Section -->
-  <section class="py-12 px-6">
-    <h2 class="text-2xl font-semibold text-center mb-6 text-orange-400">Customer Support</h2>
-    <p class="text-center max-w-2xl mx-auto">Our team is available 24/7 to support you with inquiries related to our products, digital services, and deliveries. Reach out to us via email or live chat anytime.</p>
+    </div>
   </section>
+
+  <!-- Testimonial Section -->
+  <section class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12">Testimonial</h2>
+    <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-left">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-white border border-gray-200 p-6 rounded shadow-sm">
+        <div class="text-yellow-500 text-3xl leading-none mb-4">“</div>
+        <p class="text-sm text-gray-600 mb-4">
+          A very nice massage experience, although I realized while paying that I seemed to have been shorted by about 10 minutes, which was disappointing.
+        </p>
+        <div class="flex items-center mt-6">
+          <img src="https://i.pravatar.cc/50?img=1" class="w-10 h-10 rounded-full mr-4" alt="Juliana">
+          <div>
+            <p class="font-semibold">Juliana Saucedo</p>
+            <p class="text-xs text-gray-500">Joypull Inc</p>
+            <div class="text-yellow-500 text-sm mt-1">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white border border-gray-200 p-6 rounded shadow-sm">
+        <div class="text-yellow-500 text-3xl leading-none mb-4">“</div>
+        <p class="text-sm text-gray-600 mb-4">
+          Friendly folks, professional work, and excellent customer service - what I loved most as someone who was using a coupon is that they informed me.
+        </p>
+        <div class="flex items-center mt-6">
+          <img src="https://i.pravatar.cc/50?img=2" class="w-10 h-10 rounded-full mr-4" alt="Cristal">
+          <div>
+            <p class="font-semibold">Cristal Travis</p>
+            <p class="text-xs text-gray-500">Google Inc</p>
+            <div class="text-yellow-500 text-sm mt-1">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Blog Section -->
+    <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Our Latest Blog</h2>
+        <div class="flex space-x-2">
+            <button id="blogPrevBtn" class="bg-yellow-500 text-white px-3 py-1 rounded">←</button>
+            <button id="blogNextBtn" class="bg-yellow-500 text-white px-3 py-1 rounded">→</button>
+        </div>
+        </div>
+
+        <!-- Scrollable Blog Container -->
+        <div id="blogSlider" class="flex overflow-x-auto space-x-6 scroll-smooth">
+        <!-- Blog 1 -->
+        <div class="min-w-[300px] bg-white rounded border shadow-sm overflow-hidden shrink-0">
+            <div class="h-40 bg-gray-300"></div>
+            <div class="p-4">
+            <div class="text-xs text-yellow-600 font-semibold mb-1">02 Aug</div>
+            <h3 class="font-semibold text-sm mb-1">Five Tips for your Skin & Hair</h3>
+            <p class="text-xs text-gray-500 mb-3">By John • 5 Comments</p>
+            <a href="#" class="text-yellow-600 text-xs font-medium">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="min-w-[300px] bg-white border-2 border-yellow-400 rounded shadow-sm overflow-hidden shrink-0">
+            <div class="h-40 bg-gray-300"></div>
+            <div class="p-4">
+            <div class="text-xs text-yellow-600 font-semibold mb-1">02 Aug</div>
+            <h3 class="font-semibold text-sm mb-1">We'll protect You, because nobody…</h3>
+            <p class="text-xs text-gray-500 mb-3">By John • 5 Comments</p>
+            <a href="#" class="text-yellow-600 text-xs font-medium">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="min-w-[300px] bg-white rounded border shadow-sm overflow-hidden shrink-0">
+            <div class="h-40 bg-gray-300"></div>
+            <div class="p-4">
+            <div class="text-xs text-yellow-600 font-semibold mb-1">02 Aug</div>
+            <h3 class="font-semibold text-sm mb-1">How your hair will be grow Fast</h3>
+            <p class="text-xs text-gray-500 mb-3">By Julie • 5 Comments</p>
+            <a href="#" class="text-yellow-600 text-xs font-medium">Read More →</a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript for Blog Slider -->
+    <script>
+        const blogSlider = document.getElementById('blogSlider');
+        const blogNextBtn = document.getElementById('blogNextBtn');
+        const blogPrevBtn = document.getElementById('blogPrevBtn');
+
+        const blogScrollAmount = 700;
+
+        blogNextBtn.addEventListener('click', () => {
+            blogSlider.scrollBy({ left: blogScrollAmount, behavior: 'smooth' });
+        });
+
+        blogPrevBtn.addEventListener('click', () => {
+            blogSlider.scrollBy({ left: -blogScrollAmount, behavior: 'smooth' });
+        });
+    </script>
+
+
+      <!-- FAQ Toggle Script -->
+    <script>
+        const toggles = document.querySelectorAll('.faq-toggle');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i.fas.fa-chevron-down');
+
+                // Toggle accordion content
+                content.classList.toggle('open');
+
+                // Rotate the icon
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+
+
+    <!-- JavaScript product slider -->
+    <script>
+        const slider = document.getElementById('productSlider');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        const scrollAmount = 700;
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    </script>
 
 
 @endsection
+
