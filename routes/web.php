@@ -40,6 +40,7 @@ Route::get('/subcategory/delete/{id}',  [SubCategoryController::class, 'subcateg
 Route::get('/tag',  [TagController::class, 'tag'])->middleware(['auth', 'verified'])->name('tag');
 Route::post('/tag/stor',  [TagController::class, 'tag_stor'])->middleware(['auth', 'verified'])->name('tag.stor');
 Route::get('/tag/delete/{id}',  [TagController::class, 'tag_delete'])->middleware(['auth', 'verified'])->name('tag.delete');
+Route::post('/blogtags/store',  [TagController::class, 'blogtags_store'])->middleware(['auth', 'verified'])->name('blogtags.store');
 
 
 
@@ -55,13 +56,18 @@ Route::get('/sarvices', [SarvicesController::class, 'sarvices'])->name('sarvices
 
 
 Route::get('/reviews', [VideoController::class, 'videos'])->name('videos');
+
+
 Route::get('/blogs', [BlogController::class, 'blogs'])->name('blogs');
+Route::get('/blog/show',  [BlogController::class, 'blog_show'])->name('blog.show');
+Route::get('/add/blogs',  [BlogController::class, 'add_blogs'])->middleware(['auth', 'verified'])->name('add.blogs');
+Route::post('/add/store',  [BlogController::class, 'blogs_store'])->middleware(['auth', 'verified'])->name('blogs.store');
+
+
 
 
 Route::get('/',  [FrontendController::class, 'home'])->name('home');
 Route::get('/welcome',  [FrontendController::class, 'welcome']);
-Route::get('/blog/show',  [FrontendController::class, 'blog_show'])->name('blog.show');
-Route::get('/blogs',  [FrontendController::class, 'blogs'])->name('blogs');
 Route::get('/contact',  [FrontendController::class, 'contact'])->name('contact');
 
 

@@ -1,7 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Models\BlogTag;
 use App\Models\tag;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -16,6 +15,20 @@ class TagController extends Controller
         return view('backend.tag.tag' ,[
             'tags'=>$tags,
         ]);
+    }
+    function blogtags_store(Request $request){
+        $request->validate([
+            'name' => 'required|string|max:255|unique:blog_tags,name',
+        ]);
+
+        // $slug = Str::lower(str_replace(' ', '-', $request->name)) . '-' . random_int(10000000, 999999999);
+
+        BlogTag::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+        ]);
+
+        return back()->with('blogtag success', 'BlogTag added successfully!');
     }
 
 

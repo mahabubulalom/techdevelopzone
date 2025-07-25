@@ -8,6 +8,7 @@
     <!-- tag Select2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -76,7 +77,7 @@
                     <a href="#"class=" "><i class="fa fa-briefcase pr-2"></i><span class=" ">Edit Color</span></a>
                 </li>
                 <li class="nav__items mb-4 flex border-b border-orange-400 capitalize hover:text-orange-400 transition hover:scale-125">
-                    <a href="#"class=" "><i class="fa fa-blog pr-2"></i><span class=" ">add blog</span></a>
+                    <a href="{{ route('add.blogs') }}"class=" "><i class="fa fa-blog pr-2"></i><span class=" ">add blog</span></a>
                 </li>
 
             </ul>
@@ -86,65 +87,65 @@
         <main class="flex-1 ml-40 py-6 px-4 bg-sky-200" >
 
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow p-4 flex justify-end items-center relative">
-    <div class="flex items-center gap-4">
+            <!-- Navbar -->
+            <nav class="bg-white shadow p-4 flex justify-end items-center relative">
+                <div class="flex items-center gap-4">
 
-      <!-- Notification -->
-      <button class="text-xl">🔔</button>
+                <!-- Notification -->
+                <button class="text-xl">🔔</button>
 
-      <!-- Message -->
-      <button class="text-xl">💬</button>
+                <!-- Message -->
+                <button class="text-xl">💬</button>
 
-      <!-- Profile Picture -->
-      <div class="relative">
-        <img
-          src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}"
-          alt="Profile"
-          class="w-10 h-10 rounded-full cursor-pointer"
-          id="profileButton"
-        />
+                <!-- Profile Picture -->
+                <div class="relative">
+                    <img
+                    src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}"
+                    alt="Profile"
+                    class="w-10 h-10 rounded-full cursor-pointer"
+                    id="profileButton"
+                    />
 
-        <!-- Dropdown -->
-        <div
-          id="dropdownMenu"
-          class="hidden absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 p-4"
-        >
-          <div class="text-center border-b pb-4">
-            <img src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}" alt="Profile" class="w-16 h-16 rounded-full mx-auto mb-2"/>
-            <h4 class="font-semibold text-lg">{{ Auth::user()->name }}</h4>
-            <p class="text-sm text-gray-500">{{ Auth::user()->email }}</p>
-          </div>
-          <div class="pt-4 space-y-2">
-            <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">👤 Profile</a>
-            <a href="{{ route('user.edit') }}" class="block px-3 py-2 rounded hover:bg-gray-100">✏️ Edit Profile</a>
-            <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">🔄 Switch User</a>
-            <a href="{{ route('user.logout') }}" class="block px-3 py-2 rounded hover:bg-gray-100 text-red-500">🚪 Log Out</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+                    <!-- Dropdown -->
+                    <div
+                    id="dropdownMenu"
+                    class="hidden absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 p-4"
+                    >
+                    <div class="text-center border-b pb-4">
+                        <img src="{{ asset('uploads/user') }}/{{ Auth::user()->image }}" alt="Profile" class="w-16 h-16 rounded-full mx-auto mb-2"/>
+                        <h4 class="font-semibold text-lg">{{ Auth::user()->name }}</h4>
+                        <p class="text-sm text-gray-500">{{ Auth::user()->email }}</p>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">👤 Profile</a>
+                        <a href="{{ route('user.edit') }}" class="block px-3 py-2 rounded hover:bg-gray-100">✏️ Edit Profile</a>
+                        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">🔄 Switch User</a>
+                        <a href="{{ route('user.logout') }}" class="block px-3 py-2 rounded hover:bg-gray-100 text-red-500">🚪 Log Out</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
 
-  <!-- Script -->
-  <script>
-    const profileBtn = document.getElementById('profileButton');
-    const dropdown = document.getElementById('dropdownMenu');
+            <!-- Script -->
+            <script>
+                const profileBtn = document.getElementById('profileButton');
+                const dropdown = document.getElementById('dropdownMenu');
 
-    profileBtn.addEventListener('click', () => {
-      dropdown.classList.toggle('hidden');
-    });
+                profileBtn.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden');
+                });
 
-    document.addEventListener('click', (e) => {
-      if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.add('hidden');
-      }
-    });
-  </script>
+                document.addEventListener('click', (e) => {
+                if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.classList.add('hidden');
+                }
+                });
+            </script>
 
 
-        @yield('content')
 
+            @yield('content')
 
 
 
@@ -164,6 +165,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Select2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 
     @yield('footer_script')
 
